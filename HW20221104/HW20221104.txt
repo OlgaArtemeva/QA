@@ -1,0 +1,9 @@
+JIRA
+id.atlassian.com
+
+Username: olgaartemeva@duck.com
+Password: V^-kX#G-LwaWv3y
+
+Bugs:
+
+https://asd12312kjf.atlassian.net/jira/software/projects/REG/boards/2
