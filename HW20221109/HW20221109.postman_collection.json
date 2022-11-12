@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "1633b31d-ac77-4751-aae2-526d360cc8b8",
+		"name": "HW20221109",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24249464"
+	},
+	"item": [
+		{
+			"name": "myGET1/car/best",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/* --------- тест на респонс тайм --------- */",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"/* --------- тест на статус код --------- */",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"/* - тест на проверку какого-то параметра в ответе в json - */",
+							"pm.test(\"Check serial_number body\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.serial_number).to.eql(\"123-67-123\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/car?serial_number=123-67-123",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"car"
+					],
+					"query": [
+						{
+							"key": "serial_number",
+							"value": "123-67-123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myPOST1/registration",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/* --------- тест на респонс тайм --------- */",
+							"pm.test(\"Response time is below than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.above(200);",
+							"});",
+							"",
+							"/* --------- тест на статус код --------- */",
+							"pm.test(\"Status code is 409\", function () {",
+							"    pm.response.to.have.status(409);",
+							"});",
+							"",
+							"/* - тест на проверку какого-то параметра в ответе в json - */",
+							"pm.test(\"Check path body\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.path).to.eql(\"/registration\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bGVuYUBsZS5uYToxMjNxd2VBUyQl",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"lena\",\n  \"second_name\": \"lena\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/registration",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myPOST2/comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/* --------- тест на респонс тайм --------- */",
+							"pm.test(\"Response time is equal 250ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.equal(250);",
+							"});",
+							"",
+							"/* --------- тест на статус код --------- */",
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});",
+							"",
+							"/* - тест на проверку какого-то параметра в ответе в json - */",
+							"pm.test(\"Check message body\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.eql(\"tutytutytuyt\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bGVuYUBsZS5uYToxMjNxd2VBUyQl",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"post\": \"Comment to car 004-67-12 - Tristique senectus et netus et malesuada. A condimentum vitae sapien pellentesque.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/comment?serial_number=123-67-123",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"comment"
+					],
+					"query": [
+						{
+							"key": "serial_number",
+							"value": "123-67-123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "значения для комментариев",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "java-3-ilcarro-team-b.herokuapp.com/comments",
+					"host": [
+						"java-3-ilcarro-team-b",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myGET2/car/payment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/* --------- тест на респонс тайм --------- */",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"/* --------- тест на статус код --------- */",
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							"/* - тест на проверку какого-то параметра в ответе в json - */",
+							"pm.test(\"Check status body\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.status).to.eql(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bGVuYUBsZS5uYToxMjNxd2VBUyQl",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Base_URL}}/car/payment?bookedId=12/2/2022 - 12/3/2022",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"car",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "bookedId",
+							"value": "12/2/2022 - 12/3/2022"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
