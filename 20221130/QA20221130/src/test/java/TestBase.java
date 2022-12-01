@@ -89,6 +89,7 @@ public class TestBase {
         System.out.println(source.contains(errorMessage));
         Boolean containsText = source.contains(errorMessage);
         Assert.assertEquals(containsText, flag); //  результат выполнения теста (выводится в "Total tests run: 2, Passes: 1, Failures: 1, Skips: 0")
+        String result = "";
         Thread.sleep(500);
     }
 

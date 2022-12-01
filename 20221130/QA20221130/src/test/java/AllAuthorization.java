@@ -5,14 +5,18 @@ public class AllAuthorization extends TestBase {
     @Test
 //    manager authorization check
     public void managerAuthorization() throws InterruptedException {
-
+        logger.info("Starting manager authorization (method: managerAuthorization)");
         auth("billye@example.com", "123456");
         authCheckAll("Invalid email or password",Boolean.FALSE);
+//        logger.info("check negativ authorization (method: authCheckAll), result: " + );
+
         authCheckAll("PROJECT OVERVIEW",Boolean.TRUE);
         authCheckAll("CLIENTS",Boolean.TRUE);
         authCheckAll("TEAM",Boolean.TRUE);
         authCheckAll("INVOICES",Boolean.TRUE);
         logoutManagerConsultant();
+//        logger.info("logout manager authorization (method: logoutManagerConsultant)");
+
     }
 
     @Test
