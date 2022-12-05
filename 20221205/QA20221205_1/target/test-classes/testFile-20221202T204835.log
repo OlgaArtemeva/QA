@@ -1,0 +1,3 @@
+20:48:47 [main] prepare 27 INFO  TestBase - Starting AllAuthorization
+20:48:47 [main] managerAuthorization 8 INFO  TestBase - Starting manager authorization (method: managerAuthorization)
+20:48:55 [main] managerAuthorization 11 INFO  TestBase - check negativ authorization (method: authCheckAll), result: 
