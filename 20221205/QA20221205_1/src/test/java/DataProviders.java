@@ -27,15 +27,34 @@ public class DataProviders {
         return list.iterator();
     }
 
+//    @DataProvider
+//    public Object[][] excelWrongDataRead() throws Exception {
+//        ExtUtils ext = new ExcelUtils("src/test/resources/excelData.xlsx", "wrongData");
+//        return ext.parseData();
+//    }
+
+
     @DataProvider
-    public Object[][] excelWrongDataRead() throws Exception {
-        ExtUtils ext = new ExcelUtils("src/test/resources/excelData.xlsx", "wrongData");
+        public Object[][] excelWrongDataRead() throws Exception {
+            ExtUtils ext = new ExcelUtils("src/test/resources/excelData.xlsx", "wrongData");
+            return ext.parseData();
+    }
+    @DataProvider
+    public Object[][] excelCorrectDataRead() throws Exception {
+        ExtUtils ext = new ExcelUtils("src/test/resources/excelData.xlsx", "correctData");
         return ext.parseData();
     }
 
-    @DataProvider
+    @DataProvider(parallel=true)
     public Object[][] csvWrongDataRead() throws Exception {
-        String path = "src/test/resources/wrong_creds.csv";
+        String path = "src/test/resources/all_authorization_wrong_k.csv";
+        ExtUtils ext = new CSVUtils(path, true);
+        return ext.parseData();
+    }
+
+    @DataProvider(parallel=true)
+    public Object[][] csvCorrectDataRead() throws Exception {
+        String path = "src/test/resources/all_authorization_correct_k.csv";
         ExtUtils ext = new CSVUtils(path, true);
         return ext.parseData();
     }

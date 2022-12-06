@@ -1,0 +1,3 @@
+21:24:29 [main] prepare 27 INFO  TestBase - Starting AllAuthorization
+21:24:30 [main] BadAuthTestWithDataProvider 13 INFO  TestBase - Starting negative authorization (method: negativeAuthorization)
+21:24:38 [main] BadAuthTestWithDataProvider 13 INFO  TestBase - Starting negative authorization (method: negativeAuthorization)

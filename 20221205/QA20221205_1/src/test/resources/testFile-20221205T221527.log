@@ -1,0 +1,4 @@
+22:15:37 [main] prepare 27 INFO  TestBase - Starting AllAuthorization
+22:15:38 [main] GoodAuthTestWithDataProvider 16 INFO  TestBase - Starting positive authorization (method: GoodAuthTestWithDataProvider)
+22:15:46 [main] GoodAuthTestWithDataProvider 16 INFO  TestBase - Starting positive authorization (method: GoodAuthTestWithDataProvider)
+22:15:47 [main] GoodAuthTestWithDataProvider 16 INFO  TestBase - Starting positive authorization (method: GoodAuthTestWithDataProvider)

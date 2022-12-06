@@ -41,7 +41,7 @@ public class TestBase {
         authorizationEmail.click();
         authorizationEmail.clear();
         authorizationEmail.sendKeys(email);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         WebElement authorizationPassword = wd.findElement(By.xpath("/html/body/div[1]/section/div/div/div/div/div[2]/div[4]/div/input"));
         authorizationPassword.click();
@@ -122,7 +122,7 @@ public class TestBase {
         login.click();
         Thread.sleep(500);
     }
-    public void logoutIlya() {
+    public void logoutIlya()  throws InterruptedException{
         wd.findElement(By.id("navbarDropdown")).click();
         //Find element by class name via cssSelector
         //Attention to that spaces in class name are replaced by dots for css selector
@@ -130,6 +130,11 @@ public class TestBase {
 
         //Second option: locate a link by its text
         //wd.findElement(By.partialLinkText("Sign Out")).click();
+
+        // не от Ильи
+        WebElement login = wd.findElement(By.xpath("//*[@id=\"home-header2\"]/div/div[1]/ul/li[2]/a"));
+        login.click();
+        Thread.sleep(500);
     }
 
 }

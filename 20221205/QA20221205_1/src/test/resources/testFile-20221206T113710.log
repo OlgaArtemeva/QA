@@ -1,0 +1,3 @@
+11:37:25 [main] prepare 27 INFO  TestBase - Starting AllAuthorization
+11:37:25 [TestNG-PoolService-1] BadAuthTestWithDataProviderCsv 25 INFO  TestBase - Starting negative authorization via *.csv (method: BadAuthTestWithDataProviderCsv)
+11:37:25 [TestNG-PoolService-0] BadAuthTestWithDataProviderCsv 25 INFO  TestBase - Starting negative authorization via *.csv (method: BadAuthTestWithDataProviderCsv)
