@@ -1,6 +1,0 @@
-09:59:13 [main] prepare 27 INFO  TestBase - Starting AllAuthorization
-09:59:17 [main] BadAuthTestWithDataProvider 8 INFO  TestBase - Starting negative authorization (method: BadAuthTestWithDataProvider)
-09:59:25 [main] BadAuthTestWithDataProvider 8 INFO  TestBase - Starting negative authorization (method: BadAuthTestWithDataProvider)
-09:59:33 [main] GoodAuthTestWithDataProvider 16 INFO  TestBase - Starting positive authorization (method: GoodAuthTestWithDataProvider)
-09:59:45 [main] GoodAuthTestWithDataProvider 16 INFO  TestBase - Starting positive authorization (method: GoodAuthTestWithDataProvider)
-09:59:54 [main] GoodAuthTestWithDataProvider 16 INFO  TestBase - Starting positive authorization (method: GoodAuthTestWithDataProvider)

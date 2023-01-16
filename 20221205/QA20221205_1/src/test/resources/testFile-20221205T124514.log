@@ -1,3 +1,0 @@
-12:45:29 [main] prepare 27 INFO  TestBase - Starting AllAuthorization
-12:45:29 [main] positiveAuthorization 40 INFO  TestBase - Starting positive authorization (method: managerAuthorization)
-12:45:46 [main] positiveAuthorization 40 INFO  TestBase - Starting positive authorization (method: managerAuthorization)

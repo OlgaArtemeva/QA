@@ -1,4 +1,0 @@
-11:45:40 [main] prepare 27 INFO  TestBase - Starting AllAuthorization
-11:45:40 [TestNG-PoolService-1] GoodAuthTestWithDataProviderCsv 32 INFO  TestBase - Starting positive authorization via *.csv (method: GoodAuthTestWithDataProviderCsv)
-11:45:40 [TestNG-PoolService-0] GoodAuthTestWithDataProviderCsv 32 INFO  TestBase - Starting positive authorization via *.csv (method: GoodAuthTestWithDataProviderCsv)
-11:45:40 [TestNG-PoolService-2] GoodAuthTestWithDataProviderCsv 32 INFO  TestBase - Starting positive authorization via *.csv (method: GoodAuthTestWithDataProviderCsv)
